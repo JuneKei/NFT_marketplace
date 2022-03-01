@@ -1,0 +1,50 @@
+nodejs 설치
+
+//npx 설치
+npm install npx -g
+
+*react-nodejs폴더에
+
+//react 설치
+react-nodejs/ > npx create-react-app *front /* 대문자 or 특수기호 X */
+
+//react 페이지 구동
+react-nodejs/front > npm start 
+
+//server
+react-nodejs/ > npm init -y /* package.json 파일 생성*/
+react-nodejs/ > npm install json-server /* package-lock.json */
+react-nodejs/ > npm install express --save /* node_modules 에서 express 폴더 설치*/
+
+//json server dependency 추가
+react-nodejs/package.json >
++	  "dependencies": {
++    		"json-server":"^0.16.3"
++	  },
+ 
+//확장 프로그램에서  npm 추가
+
+serverFolder > *server.js 추가
+
+// Line1,2 추가
+react-nodejs/server.js > 
+	var express= require('express');
+	var app = express();
+
+//nodemon설치 : 서버 변경시 재기동 잡아줌 , -g : 컴퓨터 전체 글로벌 install
+npm install nodemon -g
+
+//nodemon으로 서버 구동
+react-nodejs > nodemon server.js
+
+//폴더위치 찍어보기
+react-nodejs/server.js > 
+	app.get('/',function(req,res){
+  	 	  res.send("<h1>폴더 주소 확인 : </h1>"+__dirname)
+	})
+
+react-nodejs/server.js > 
+	app.get('/',function(req,res){
+	    //res.send("<h1>폴더 주소 확인 : </h1>"+__dirname)
+	    res.sendFile(__dirname + "/public/index.html")
+	})
