@@ -1,6 +1,7 @@
-var express= require('express');
+//node_modules 에서 express 모듈을 가져온다
+var express= require('express'); 
+var app = express(); 
 
-var app = express();
 // 경로 설정
 var path = require('path');
 

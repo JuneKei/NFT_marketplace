@@ -14,7 +14,7 @@ react-nodejs/front > npm start
 //server
 react-nodejs/ > npm init -y /* package.json 파일 생성*/
 react-nodejs/ > npm install json-server /* package-lock.json */
-react-nodejs/ > npm install express --save /* node_modules 에서 express 폴더 설치*/
+react-nodejs/ > npm install express --save /* node_modules 에서 express 폴더 설치 , --save :설치된 express를 package.json 에 넣어둔다 */
 
 //json server dependency 추가
 react-nodejs/package.json >
