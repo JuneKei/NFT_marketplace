@@ -1,13 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import BoardList from "./BoardList";
 
 function App() {
-  return (
-    <div className="App">
-      Hello World!
-    </div>
-  );
+    return (
+        <div className="App">
+            <BoardList></BoardList>
+        </div>
+    );
 }
 
 export default App;
