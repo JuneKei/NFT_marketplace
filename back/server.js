@@ -1,25 +1,15 @@
-const express = require("express");
-const mysql = require('mysql');
+const express = require('express');
+const mongoose = require('mongoose');
+const PORT = 5000;
 
 const app = express();
-const port = 5000
 
-const con = mysql.createConnection({
-    host:'localhost',
-    database : 'doit',
-    user:'root',
-    password:'0000'
-})
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-con.connect(function(err){
-    if(err) throw err;
-    console.log('connect');
-})
+mongoose
+    .connect('mongodb://localhost:27017/testDB', { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('connected to mongodb'))
+    .catch(e => console.log(e));
 
-app.get('/', function (req,res) {
-  res.sendFile(path + "index.html");
-});
-
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}.`);
-});
+app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
