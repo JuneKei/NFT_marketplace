@@ -1,5 +1,0 @@
-//public 폴더에서
-로고png 파일 삭제
-
-//src 폴더에서
-App.test.tsx, logo.svg, reportWebVitals.ts, setupTests.ts 삭제
