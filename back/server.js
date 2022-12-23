@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 mongoose
-    .connect('mongodb://localhost:27017/testDB', { useNewUrlParser: true, useUnifiedTopology: true })
+    .connect('mongodb://127.0.0.1:27017/testDB', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('connected to mongodb'))
     .catch(e => console.log(e));
 
