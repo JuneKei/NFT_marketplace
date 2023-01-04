@@ -12,4 +12,6 @@ mongoose
     .then(() => console.log('connected to mongodb'))
     .catch(e => console.log(e));
 
+require("./app/routes/content.routes")(app);
+
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
